@@ -3,9 +3,6 @@ title: "Previewnet"
 slug: "previewnet"
 ---
 
-import ThemedImage from '@theme/ThemedImage';
-import useBaseUrl from '@docusaurus/useBaseUrl';
-
 # Previewnet
 
 **Program Overview**
@@ -63,7 +60,6 @@ End of Performance testing.
 
 **March 30:** - Results announced for Mainnet operators
 
-**April 10 - 14:** Reconfigure Mainnet nodes to new batch of operators
 
 
 # What's New in Previewnet
@@ -75,18 +71,17 @@ End of Performance testing.
  
 1. Make sure you've provisioned your machine to meet the requirements below:
 
-**Hardware requirements**
-
-24 cores, 48 threads
-64 GB of RAM
+- **Machine Requirements**
+  - CPU: 24 cores, 48 threads
+  - Memory: 64 GB of RAM
   
-**On GCP**
+- **On GCP**
 
-n2-standard-48
+  - n2-standard-48
 
-**On AWS**
+- **On AWS**
 
-c6i.16xlarge
+  - c6i.16xlarge
 
 2. Join the Previewnet network. (whitelist + airdrop?)
 
