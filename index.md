@@ -56,16 +56,19 @@ End of Performance testing.
 1. Make sure you've provisioned your machine to meet the requirements below:
 
 - **Machine Requirements**
-  - CPU: 24 cores, 48 threads
+  - CPU: 48 physical cores or 64 thread
   - Memory: 64 GB of RAM
+  - Clock speed: 2.8GHz, or faster
+  - Storage: 2T SSD with at least 40K IOPS and 200MiB/s bandwidth.
+  - Networking bandwidth: 1Gbps
   
 - **On GCP**
 
-  - n2-standard-48
+  - t2d-standard-48
 
 - **On AWS**
 
-  - c6i.16xlarge
+  - C6i.16xlarge or c6id.16xlarge
 
 2. Join the Previewnet network
 3. Provide Aptos with your operator address
