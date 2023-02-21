@@ -9,24 +9,6 @@ slug: "previewnet"
 
 The Aptos Previewnet Program is a quarterly program that Aptos will run to both test out new features, as well as evaluate performance of existing and aspiring node operators who wish to operate nodes on Mainnet. Previewnet is a separate network where node operators can remain on after the performance testing period to use as a sandbox. 
 
-There are three phases in Previewnet:
-
-**Phase 1:**
-
-Operators join the network and get set up to run a Validator Node and Validator Full Node. Aptos will do a mini-load test. The intention of this phase is to help all the operators (existing, and especially new) get onto the network and flush out any set-up issues.
-
-**Phase 2:**
-
-Aptos releases new features onto Previewnet and does some load testing. In this phase, our intention is to rigorously test these new features, and find out if there are any bugs in the code. The performance in this phase does not count towards the “final score”. We have given some buffer in this period in case there are any fixes that need to go out, and to help operators resolve any unexpected issues.
-
-**Phase 3:**
-
-This will be the same as Phase 2, but performance will be counted. The scores here will go into the considerations for selecting the final Mainnet node operators.
-
-Previewnet performance, community / ecosystem contributions, and ongoing mainnet node performance are all factors that are taken into consideration when making the final decision. 
-
-After the end of the performance testing period, operators can choose to either leave Previewnet or stay on and use Previewnet as an “operator playground” (Playground Phase). During the Playground Phase, Aptos will not be actively maintaining this network. Operators can continue to use this as a location for testing (i.e. trying to practice switching machines or trying out failover methods). It will be “reactivated” again when the next Previewnet Program 2 starts in June’23.
-
 
 ## Previewnet Key Dates
 
@@ -36,9 +18,9 @@ After the end of the performance testing period, operators can choose to either 
 **Phase 1**
 
 
-**March 6 - 8:** Operators join Previewnet. All operators to complete joining network by March 8
+**March 6 - 9:** Operators join Previewnet. All operators to complete joining network by March 8
 
-**March 9:** Mini load-test on Previewnet (scores not counted)
+**March 10:** Mini load-test on Previewnet (scores not counted)
 
 
 **Phase 2**
@@ -59,6 +41,8 @@ End of Performance testing.
 **March 28:** Previewnet in “playground phase” (see below).
 
 **March 30:** - Results announced for Mainnet operators
+
+**April 10-14:** - Operators join Mainnet validator set
 
 
 
@@ -83,9 +67,11 @@ End of Performance testing.
 
   - c6i.16xlarge
 
-2. Join the Previewnet network. (whitelist + airdrop?)
-
-3. Follow the steps in https://aptos.dev/nodes/validator-node/operator/running-validator-node/running-validator-node to set up your Validator Node and Validator Full Node. 
+2. Join the Previewnet network
+3. Provide Aptos with your operator address
+4. Once you've received tokens, you can join the validator set
+5. Follow the steps in https://aptos.dev/nodes/validator-node/operator/running-validator-node/running-validator-node to set up your Validator Node and Validator Full Node. 
+6. Set up telemetry for node monitoring
 
 # Connecting to Previewnet
 
@@ -126,7 +112,7 @@ Before joining Previewnet, you need to bootstrap your node with the genesis blob
 - Stop your node and remove the data directory. **Make sure you remove the secure-data.json file too**, path is defined [here](https://github.com/aptos-labs/aptos-core/blob/e358a61018bb056812b5c3dbd197b0311a071baf/docker/compose/aptos-node/validator.yaml#L13). 
 - Download the `genesis.blob` and `waypoint.txt` file published by Aptos Labs team.
 - Update your `account_address` in `validator-identity.yaml` to your **owner** wallet address, don't change anything else, keep the keys as is.
-- Pull the latest changes on `testnet` branch. It should be commit `843b204dce971d98449b82624f4f684c7a18b991`
+- Pull the latest changes on ` ` branch. It should be commit ` `
 - You should use fast sync to bootstrap your node, to sync faster when starting, add this to your `validator.yaml` and `fullnode.yaml`
     ```
     state_sync:
@@ -142,7 +128,13 @@ Before joining Previewnet, you need to bootstrap your node with the genesis blob
 - Stop your node and remove the data volumes, `docker compose down --volumes`. Make sure you remove the secure-data.json file too, path is defined [here](https://github.com/aptos-labs/aptos-core/blob/e358a61018bb056812b5c3dbd197b0311a071baf/docker/compose/aptos-node/validator.yaml#L13). 
 - Download the `genesis.blob` and `waypoint.txt` file published by Aptos Labs team.
 - Update your `account_address` in `validator-identity.yaml` to your **owner** wallet address.
-- Update your docker image to use tag `testnet_843b204dce971d98449b82624f4f684c7a18b991`
+- Update your docker image to use 
+
+
+
+
+
+` `
 - You should use fast sync to bootstrap your node, to sync faster when starting, add this to your `validator.yaml` and `fullnode.yaml`
     ```
     state_sync:
@@ -157,7 +149,7 @@ Before joining Previewnet, you need to bootstrap your node with the genesis blob
 
 - Increase `era` number in your Terraform config, this will wipe the data once applied.
 - Update `chain_id` to 2.
-- Update your docker image to use tag `testnet_843b204dce971d98449b82624f4f684c7a18b991`
+- Update your docker image to use tag ` `
 - Close metrics port and REST API port for validator, also use fast sync to bootstrap the node. add the helm values in your `main.tf ` file, for example:
 
     ```
