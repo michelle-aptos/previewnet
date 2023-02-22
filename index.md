@@ -49,7 +49,23 @@ End of Performance testing.
 # What's New in Previewnet
   New features that are up for testing in Previewnet:
   
-  Quorum Store
+  **Quorum Store**
+  
+  Quorum Store is a production-optimized implementation of [Narwhal](https://aptoslabs.com/assets/pdf/2105.11827-2284bd4d247772686f8cce16ae293575526f0d27.pdf) that improves [consensus](https://aptos.dev/guides/basics-life-of-txn#consensus) thoroughput by changing how validators disseminate, order, and execute transactions.
+  
+  Quorum Store resolves consensus bottlenecks by:
+  
+  1. Decoupling data dissemination and metadata ordering in order to make consensus lightweight
+
+  2. Disemminating each transaction only once so that all nodes are broadcasting transaction batches and getting batches certified by PoS, concurrently. This maximizes the utilization of the system.
+ 
+ 
+ Incentives Model:
+ 
+Transactions first get collected into batches, and then batches get collected into blocks. We want to motivate validators to prioritize appropriately in both stages, so fees will be distributed to batch proposers and block producers. 
+
+
+  
 
  # Previewnet Setup
  
