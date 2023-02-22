@@ -62,7 +62,12 @@ End of Performance testing.
  
  Incentives Model:
  
-Transactions first get collected into batches, and then batches get collected into blocks. We want to motivate validators to prioritize appropriately in both stages, so fees will be distributed to batch proposers and block producers. 
+Transactions first get collected into batches, and then batches get collected into blocks. We want to motivate validators to prioritize appropriately in both stages, so fees will be distributed to batch proposers and block proposers as follows:
+
+- 90% batch proposers
+- 10% to block proposers  
+- 0% burn
+
 
 
   
