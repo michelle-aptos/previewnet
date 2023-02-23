@@ -58,15 +58,20 @@ End of Performance testing.
   1. Decoupling data dissemination and metadata ordering in order to make consensus lightweight
 
   2. Disemminating each transaction only once so that all nodes are broadcasting transaction batches and getting batches certified by PoS, concurrently. This maximizes the utilization of the system.
- 
- 
- Incentives Model:
- 
-Transactions first get collected into batches, and then batches get collected into blocks. We want to motivate validators to prioritize appropriately in both stages, so fees will be distributed to batch proposers and block proposers as follows:
 
-- 90% batch proposers
-- 10% to block proposers  
-- 0% burn
+
+[Link to benchmark blogpost]
+
+This will be enabled through a governance proposal:
+
+[Link to AIP]
+ 
+ 
+A new incentives model will also be enabled through a separate governance proposal:
+
+[Link to AIP]
+ 
+In the new incentives model, transactions first get collected into batches, and then batches get collected into blocks. We want to motivate validators to prioritize appropriately in both stages, so fees will be distributed to batch proposers and block proposers.
 
 
 
