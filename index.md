@@ -18,7 +18,7 @@ The Aptos Previewnet Program is a quarterly program that Aptos will run to both 
 **Phase 1**
 
 
-**March 6 - 9:** Operators join Previewnet. All operators to complete joining network by March 8
+**March 6 - 9:** Operators join Previewnet. All operators to complete joining network by March 9
 
 **March 10:** Mini load-test on Previewnet (scores not counted)
 
