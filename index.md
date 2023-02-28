@@ -18,9 +18,9 @@ The Aptos Previewnet Program is a quarterly program that Aptos will run to both 
 **Phase 1**
 
 
-**March 6 - 9:** Operators join Previewnet. All operators to complete joining network by March 9
+**March 3 - 6:** Operators join Previewnet. All operators to complete joining network by March 6
 
-**March 10:** Mini load-test on Previewnet (scores not counted)
+**March 7:** Mini load-test on Previewnet (scores not counted)
 
 
 **Phase 2**
@@ -96,11 +96,10 @@ In the new incentives model, transactions first get collected into batches, and 
 
   - C6i.16xlarge or c6id.16xlarge
 
-2. Join the Previewnet network
-3. Provide Aptos with your operator address
-4. Once you've received tokens, you can join the validator set
-5. Follow the steps in https://aptos.dev/nodes/validator-node/operator/running-validator-node/running-validator-node to set up your Validator Node and Validator Full Node. 
-6. Set up telemetry for node monitoring
+2. Provide Aptos with your operator address
+3. Once you've received tokens, you can join the validator set
+4. Follow the steps in https://aptos.dev/nodes/validator-node/operator/running-validator-node/running-validator-node to set up your Validator Node and Validator Full Node. 
+5. Set up telemetry for node monitoring
 
 # Connecting to Previewnet
 
