@@ -103,34 +103,6 @@ In the new incentives model, transactions first get collected into batches, and 
 
 # Connecting to Previewnet
 
-## Initializing the staking pool
-
-- Initialize CLI with your wallet **private key**, you can get in from Settings -> Credentials
-
-  ```bash
-  aptos init --profile previewnet-owner \
-  ```
-
-- Initialize staking pool using CLI
-
-  ```bash
-  aptos stake initialize-stake-owner \
-    --initial-stake-amount 100000000000000 \
-    --operator-address <operator-address> \
-    --voter-address <voter-address> \
-    --profile previewnet-owner
-  ```
-
-- Don't forget to transfer some coin to your operator account to pay gas, you can do that with Petra, or CLI
-
-  ```bash
-  aptos account create --account <operator-account> --profile previewnet-owner
-  aptos account transfer \
-  --account <operator-account> \
-  --amount 5000 \
-  --profile previewnet-owner
-  ```
-
 ## Bootstrapping validator node
 
 Before joining Previewnet, you need to bootstrap your node with the genesis blob and waypoint provided by Aptos Labs team. This will convert your node from test mode to prod mode.
@@ -219,6 +191,34 @@ Before joining Previewnet, you need to bootstrap your node with the genesis blob
         --from-file=validator-identity.yaml=keys/validator-identity.yaml \
         --from-file=validator-full-node-identity.yaml=keys/validator-full-node-identity.yaml
     ```
+
+## Initializing the staking pool
+
+- Initialize CLI with your wallet **private key**, you can get in from Settings -> Credentials
+
+  ```bash
+  aptos init --profile previewnet-owner \
+  ```
+
+- Initialize staking pool using CLI
+
+  ```bash
+  aptos stake initialize-stake-owner \
+    --initial-stake-amount 100000000000000 \
+    --operator-address <operator-address> \
+    --voter-address <voter-address> \
+    --profile previewnet-owner
+  ```
+
+- Don't forget to transfer some coin to your operator account to pay gas, you can do that with Petra, or CLI
+
+  ```bash
+  aptos account create --account <operator-account> --profile previewnet-owner
+  aptos account transfer \
+  --account <operator-account> \
+  --amount 5000 \
+  --profile previewnet-owner
+  ```
 
 ## Joining Validator Set
 
