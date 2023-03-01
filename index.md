@@ -111,13 +111,6 @@ Follow the steps here: https://aptos.dev/guides/getting-started
 
 Before joining Previewnet, you need to bootstrap your node with the genesis blob and waypoint provided by Aptos Labs team. This will convert your node from test mode to prod mode.
 
-1. Run ```aptos init```
-2. Get stake pool address
-
-```bash
-aptos node get-stake-pool \
-  --owner-address <owner_address> 
-```
 
 ### Using source code
 
@@ -206,10 +199,10 @@ aptos node get-stake-pool \
 
 ## Initializing the staking pool
 
-- Initialize CLI with your wallet **private key**, you can get in from Settings -> Credentials
+- Initialize CLI with your wallet **private key**, you can get in from Settings -> Manage Account
 
   ```bash
-  aptos init --profile previewnet-owner \
+  aptos init
   ```
 
 - Initialize staking pool using CLI
