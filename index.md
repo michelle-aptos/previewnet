@@ -96,16 +96,28 @@ In the new incentives model, transactions first get collected into batches, and 
 
   - C6i.16xlarge or c6id.16xlarge
 
-2. Provide Aptos with your operator address
-3. Once you've received tokens, you can join the validator set
-4. Follow the steps in https://aptos.dev/nodes/validator-node/operator/running-validator-node/running-validator-node to set up your Validator Node and Validator Full Node. 
+2. Follow the steps in Connecting to Previewnet below to set up your Validator Node and Validator Full Node
+3. Provide Aptos with your operator address
+4. Once you've received tokens, you can join the validator set by following the steps in Joining Validator Set
 5. Set up telemetry for node monitoring
 
 # Connecting to Previewnet
 
+## Preparing your environment
+
+Follow the steps here: https://aptos.dev/guides/getting-started
+
 ## Bootstrapping validator node
 
 Before joining Previewnet, you need to bootstrap your node with the genesis blob and waypoint provided by Aptos Labs team. This will convert your node from test mode to prod mode.
+
+1. Run ```aptos init```
+2. Get stake pool address
+
+```bash
+aptos node get-stake-pool \
+  --owner-address <owner_address> 
+```
 
 ### Using source code
 
@@ -355,6 +367,8 @@ Once your validator node joined the validator set, you can verify the correctnes
     ```
     
     You should expect the active value for your StakePool to keep increasing. It's updated at every epoch, so it will be every two hours.
+    
+
 
 
 ## Leaving Validator Set
